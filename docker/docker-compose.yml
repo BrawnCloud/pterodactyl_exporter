@@ -1,6 +1,8 @@
 services:
   pterodactyl-exporter:
-    image: loens2/pterodactyl_exporter:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
     container_name: pterodactyl-exporter
     ports:
       - "9531:9531"
